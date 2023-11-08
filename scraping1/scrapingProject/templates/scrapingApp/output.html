@@ -1,0 +1,26 @@
+{% extends "scrapingApp/base.html" %}
+{% block body_block%}
+
+<div class="jumbtron">
+    <h1>Movie Info are follows !!</h1>
+    {% if movie %}
+        <li>MOVIE NAME : {{movie.moviename}}</li>
+        <li>MOVIE YEAR : {{movie.movieyear}}</li>
+        <li>MOVIE TIME : {{movie.movietime}}</li>
+        <li>MOVIE RATING : {{movie.movierating}}</li>
+        <li>MOVIE URL : {{movie.movieurl}}/li>
+        <li>MOVIE DIRECTOR : {{movie.moviedirector}}</li>
+
+        <li>DIRECTOR URL : {{movie.directorurl}}</li>
+<!--        <li>TOP 4 MOVIES : </li>-->
+
+    {% else %}
+        <p>NO record found</p>
+    {% endif %}
+<!--    {% for a in topmovies %}-->
+<!--            <li>{{a}}</li>-->
+<!--        {% endfor %}-->
+    {{topmovies}}
+</div>
+
+{% endblock %}

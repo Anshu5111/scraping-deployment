@@ -1,0 +1,21 @@
+{% extends "scrapingApp/base.html" %}
+{% block body_block%}
+
+
+
+<div class="jumbtron">
+    <h1>Please Login</h1>
+    <form action="{% url 'scrapingApp:moviename' %}" method="POST">
+        {% csrf_token %}
+        <label for="moviename">Movie</label>
+        <input typr="text" name="moviename" placeholder="Enter movie name">
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+
+
+
+
+{% endblock %}

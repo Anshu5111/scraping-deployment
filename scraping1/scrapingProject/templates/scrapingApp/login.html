@@ -1,0 +1,19 @@
+{% extends "scrapingApp/base.html" %}
+{% block body_block%}
+
+
+<div class="jumbtron">
+    <h1>Please Login</h1>
+    <form action="{% url 'scrapingApp:user_login' %}" method="POST">
+        {% csrf_token %}
+        <label for="username" >Username</label>
+        <input typr="text" name="username" placeholder="Enter username">
+
+        <label for="password" >Password</label>
+        <input typr="password" name="password" placeholder="Enter password">
+
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+{% endblock %}
